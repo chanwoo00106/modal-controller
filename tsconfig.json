@@ -1,12 +1,14 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es6",
     "lib": ["dom", "esnext"],
     "jsx": "react",
     "module": "es6",
     "moduleResolution": "node",
     "baseUrl": "./src",
     "strict": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "declaration": true,
+    "declarationDir": "./dist"
   }
 }
