@@ -1,16 +1,23 @@
 {
   "name": "modal-supporter",
   "version": "1.0.0",
-  "description": "modal supporter",
+  "description": "This is a library that helps with popping up modals in React.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chanwoo00106/modal-supporter.git"
+  },
+  "homepage": "https://github.com/chanwoo00106/modal-supporter",
   "main": "./dist/index.js",
   "type": "module",
   "scripts": {
     "build": "rollup -c",
     "prepare": "husky"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "modal"
+  ],
+  "author": "Chanwoo Byun",
+  "license": "MIT",
   "devDependencies": {
     "@babel/core": "^7.24.1",
     "@babel/preset-env": "^7.24.1",
