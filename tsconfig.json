@@ -9,6 +9,7 @@
     "strict": true,
     "esModuleInterop": true,
     "declaration": true,
-    "declarationDir": "./dist"
+    "declarationDir": "./dist",
+    "declarationMap": true
   }
 }
