@@ -1,26 +1,26 @@
-# modal-supporter
+# modal-controller
 
-This is a library that helps with popping up modals in React.
+This is a library that helps with popping up modals in React.  
 react에서 모달 띄우는 작업을 도와주는 라이브러리입니다.
 
 ## Installation
 
 ```bash
 # npm
-$ npm i modal-supporter
+$ npm i modal-controller
 
 # yarn
-$ yarn add modal-supporter
+$ yarn add modal-controller
 
 # pnpm
-$ pnpm add modal-supporter
+$ pnpm add modal-controller
 ```
 
 ## How to use
 
 ```tsx
 // main.tsx
-import { ModalControllerProvider } from 'modal-supporter'
+import { ModalControllerProvider } from 'modal-controller'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -33,7 +33,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
 
 ```tsx
 // TestModal.tsx
-import { ModalDefaultProps } from 'modal-supporter'
+import { ModalDefaultProps } from 'modal-controller'
 
 const TestModal = ({ resolve }: ModalDefaultProps) => {
   return (
@@ -52,7 +52,7 @@ export default TestModal
 ```tsx
 // App.tsx
 import TestModal from './TestModal'
-import { useModalController } from 'modal-supporter'
+import { useModalController } from 'modal-controller'
 
 function App() {
   const modalController = useModalController()

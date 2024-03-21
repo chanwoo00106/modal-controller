@@ -3,7 +3,7 @@ import { createPortal } from 'react-dom'
 import notifyManager from './notifyManager'
 import { useModalController } from '.'
 
-const MODAL_ID = 'modal-supporter'
+const MODAL_ID = 'modal-controller'
 
 const ModalContainer = () => {
   const modalController = useModalController()

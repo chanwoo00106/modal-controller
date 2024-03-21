@@ -1,16 +1,16 @@
 {
-  "name": "modal-supporter",
+  "name": "modal-controller",
   "version": "1.0.0",
   "description": "This is a library that helps with popping up modals in React.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/chanwoo00106/modal-supporter.git"
+    "url": "https://github.com/chanwoo00106/modal-controller.git"
   },
   "bugs": {
-    "url": "https://github.com/chanwoo00106/modal-supporter/issues",
+    "url": "https://github.com/chanwoo00106/modal-controller/issues",
     "email": "byun00106@gmail.com"
   },
-  "homepage": "https://github.com/chanwoo00106/modal-supporter",
+  "homepage": "https://github.com/chanwoo00106/modal-controller",
   "main": "./dist/index.js",
   "type": "module",
   "scripts": {
