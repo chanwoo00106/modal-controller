@@ -1,7 +1,9 @@
-export class Hello {
-  constructor(private readonly name: string) {}
+export { Modal } from './Modal'
+export {
+  ModalControllerContext,
+  ModalControllerProvider,
+  useModalController,
+} from './ModalProvider'
+export { ModalController } from './ModalController'
 
-  sayHello() {
-    console.log(`hello! ${this.name}`)
-  }
-}
+export type { ModalDefaultProps } from './Modal'
