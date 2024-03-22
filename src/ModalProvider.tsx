@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react'
-import { ModalController } from 'ModalController'
-import ModalContainer from 'ModalContainer'
+import React from 'react'
+import { ModalController } from '.'
+import ModalContainer from './ModalContainer'
 
 const modalController = new ModalController()
 export const ModalControllerContext = React.createContext(modalController)
@@ -16,7 +16,7 @@ interface Props {
 }
 
 export const ModalControllerProvider = ({ children }: Props) => {
-  useEffect(() => {
+  React.useEffect(() => {
     return () => modalController.unmount()
   }, [])
 

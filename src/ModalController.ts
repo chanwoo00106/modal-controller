@@ -1,5 +1,5 @@
-import { ReactNode } from 'react'
-import { Modal, ModalDefaultProps } from './Modal'
+import React from 'react'
+import { Modal, ModalDefaultProps } from '.'
 import notifyManager from './notifyManager'
 
 export class ModalController {
@@ -30,7 +30,7 @@ export class ModalController {
 
   async push<P extends object = any>(
     key: string,
-    Component: (props: ModalDefaultProps) => ReactNode,
+    Component: (props: ModalDefaultProps) => React.ReactNode,
     props?: P,
   ) {
     return new Promise((resolve) => {
