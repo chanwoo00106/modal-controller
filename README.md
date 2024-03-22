@@ -1,7 +1,7 @@
 # modal-controller
 
-This is a library that helps with popping up modals in React.  
-react에서 모달 띄우는 작업을 도와주는 라이브러리입니다.
+A library that helps with displaying modals in React.  
+React에서 모달 띄우는 작업을 도와주는 라이브러리입니다.
 
 ## Installation
 
