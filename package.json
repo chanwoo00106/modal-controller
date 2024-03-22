@@ -55,6 +55,9 @@
     "react": "^18.2.0"
   },
   "lint-staged": {
-    "*.{ts,tsx}": "prettier -w ./src"
+    "*.{ts,tsx,js,jsx}": [
+      "prettier -w ./src",
+      "eslint --fix ./src"
+    ]
   }
 }
