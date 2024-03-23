@@ -10,6 +10,7 @@
     "esModuleInterop": true,
     "declaration": true,
     "declarationDir": "./dist",
-    "declarationMap": true
+    "declarationMap": true,
+    "types": ["vitest/globals"]
   }
 }
