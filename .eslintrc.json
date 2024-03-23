@@ -7,7 +7,6 @@
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
-    "plugin:import/recommended",
     "plugin:prettier/recommended"
   ],
   "parser": "@typescript-eslint/parser",
@@ -18,18 +17,13 @@
       "jsx": true
     }
   },
-  "plugins": ["@typescript-eslint", "react", "import"],
+  "plugins": ["@typescript-eslint", "react"],
   "rules": {
     "no-console": "error",
     "@typescript-eslint/no-explicit-any": "off"
   },
   "ignorePatterns": ["dist"],
   "settings": {
-    "import/resolver": {
-      "node": {
-        "extensions": [".js", ".jsx", ".ts", ".tsx"]
-      }
-    },
     "react": {
       "pragma": "React",
       "version": "detect"
