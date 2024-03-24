@@ -33,6 +33,9 @@ export class ModalController {
     Component: (props: ModalDefaultProps) => React.ReactNode,
     props?: P,
   ) {
+    if (this.#modalStack.find((modal) => modal.key === key))
+      throw new Error('should not have modals with the same id')
+
     return new Promise((resolve) => {
       this.#modalStack.push(
         new Modal({
