@@ -1,7 +1,7 @@
 {
   "name": "modal-controller",
   "version": "1.0.0",
-  "description": "This is a library that helps with popping up modals in React.",
+  "description": "A library that helps with displaying modals in React.",
   "repository": {
     "type": "git",
     "url": "https://github.com/chanwoo00106/modal-controller.git"
