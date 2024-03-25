@@ -1,6 +1,8 @@
 .husky
 node_modules
 src
+test
+.eslintrc.json
 .gitignore
 .nvmrc
 .prettierrc.json
@@ -8,3 +10,5 @@ commitlint.config.js
 pnpm-lock.yaml
 rollup.config.js
 tsconfig.json
+vitest.config.ts
+vitest.setup.tsx
