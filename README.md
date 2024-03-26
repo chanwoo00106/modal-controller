@@ -22,11 +22,13 @@ $ pnpm add modal-controller
 
 ```tsx
 // main.tsx
-import { ModalControllerProvider } from 'modal-controller'
+import { ModalController, ModalControllerProvider } from 'modal-controller'
+
+const modalController = new ModalController()
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <ModalControllerProvider>
+    <ModalControllerProvider modalController={modalController}>
       <App />
     </ModalControllerProvider>
   </React.StrictMode>,
