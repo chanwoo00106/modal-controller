@@ -14,7 +14,7 @@ export default {
     }),
     typescript({
       tsconfig: './tsconfig.json',
-      exclude: ['**/*.test.{ts,tsx}', 'vitest.setup.tsx', 'vitest.config.ts'],
+      exclude: ['./test/**', 'vitest.setup.tsx', 'vitest.config.ts'],
     }),
   ],
 }
