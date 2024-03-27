@@ -28,21 +28,21 @@ export class ModalController {
     notifyManager.run()
   }
 
-  async push<P extends object = any>(
+  async push<R = any, P extends object = any>(
     key: string,
-    Component: (props: ModalDefaultProps) => React.ReactNode,
+    Component: (props: ModalDefaultProps<P, R>) => React.ReactNode,
     props?: P,
-  ) {
+  ): Promise<R> {
     if (this.#modalStack.find((modal) => modal.key === key))
       throw new Error('should not have modals with the same id')
 
-    return new Promise((resolve) => {
+    return new Promise<R>((resolve) => {
       this.#modalStack.push(
         new Modal({
           key,
           Component,
           props,
-          resolve: (value: any) => this.handlePromise(key, resolve, value),
+          resolve: (value: R) => this.handlePromise<R>(key, resolve, value),
         }),
       )
 
@@ -50,12 +50,8 @@ export class ModalController {
     })
   }
 
-  private handlePromise(
-    key: string,
-    resolver: (value: any) => void,
-    value: any,
-  ) {
-    resolver(value)
+  private handlePromise<R>(key: string, resolve: (value: R) => void, value: R) {
+    resolve(value)
     this.#modalStack = this.#modalStack.filter((modal) => modal.key !== key)
     notifyManager.run()
   }

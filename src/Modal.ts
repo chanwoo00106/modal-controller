@@ -6,14 +6,14 @@ export type ModalDefaultProps<T extends object = object, R = any> = T & {
 
 interface ModalType<P extends object = any> {
   key: string
-  Component: (props: ModalDefaultProps) => React.ReactNode
+  Component: (props: ModalDefaultProps<P>) => React.ReactNode
   props?: P
   resolve: (value: any) => void
 }
 
 export class Modal<P extends object = any> implements ModalType<P> {
   readonly key: string
-  readonly Component: (props: ModalDefaultProps) => React.ReactNode
+  readonly Component: (props: ModalDefaultProps<P>) => React.ReactNode
   readonly props?: P
   readonly resolve: (value: any) => void
 
