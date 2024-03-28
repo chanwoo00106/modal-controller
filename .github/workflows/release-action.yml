@@ -20,7 +20,7 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v3
         with:
-          node-version-file: ".nvmrc"
+          node-version-file: '.nvmrc'
           cache: pnpm
           registry-url: https://registry.npmjs.org
 
@@ -32,6 +32,6 @@ jobs:
 
       - name: Publish 🚀
         shell: bash
-        run: pnpm publish -r
+        run: pnpm publish -r --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
