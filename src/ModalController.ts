@@ -2,6 +2,20 @@ import React from 'react'
 import { Modal, ModalDefaultProps } from '.'
 import notifyManager from './notifyManager'
 
+type ComponentType = (props: ModalDefaultProps<any, any>) => React.ReactNode
+
+type ComponentFirstParameter<T> = T extends (
+  props: ModalDefaultProps<infer P>,
+) => any
+  ? P
+  : never
+
+type ComponentSecondParameter<T> = T extends (
+  props: ModalDefaultProps<infer _P, infer R>,
+) => any
+  ? R
+  : never
+
 export class ModalController {
   #modalStack: Modal[] = []
 
@@ -28,11 +42,11 @@ export class ModalController {
     notifyManager.run()
   }
 
-  async push<R = any, P extends object = any>(
-    key: string,
-    Component: (props: ModalDefaultProps<P, R>) => React.ReactNode,
-    props?: P,
-  ): Promise<R> {
+  async push<
+    C extends ComponentType,
+    P = ComponentFirstParameter<C>,
+    R = ComponentSecondParameter<C>,
+  >(key: string, Component: C, props?: P): Promise<R> {
     if (this.#modalStack.find((modal) => modal.key === key))
       throw new Error('should not have modals with the same id')
 
