@@ -43,7 +43,7 @@ interface Props {
   title: string
 }
 
-const Modal = ({ resolve, title }: ModalDefaultProps<Props>) => {
+const Modal = ({ resolve, title }: ModalDefaultProps<Props, boolean>) => {
   return (
     <div>
       <h1>{title}</h1>
@@ -82,3 +82,13 @@ function App() {
 
 export default App
 ```
+
+## ModalController Spec
+
+| Property   | Type                                                                                                                                              | Description               |
+| ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------- |
+| modalStack | Modal[]                                                                                                                                           | Returns Modal list        |
+| push       | push<C extends ComponentType, P = ComponentFirstParameter<C>, R = ComponentSecondParameter<C>> (key: string, Component: C, props?: P): Promise<R> | Add a Modal               |
+| top        | () => Modal                                                                                                                                       | Returns the highest Modal |
+| pop        | () => void                                                                                                                                        | Remove the highest Modal  |
+| clear      | () => void                                                                                                                                        | Remove all Modal          |
